@@ -111,6 +111,8 @@ number_NA <- sum(is.na(activity_data$steps))
 
 Q2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
+<b>Strategy</b>: If the steps is missing, we will use the mean of that 5 minutes inveral as the estimate. Merge the average steps for each interval to the original data and call it as the new column "steps_avg". If "steps" is missing, then use the value at "steps_avg".
+
 
 ```r
 # use the mean of that 5-minute interval to fill in missing values
